@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cabecalho {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.marca {
+    font-size: 24px;
+    font-weight: bold;
+    color: #009c3b;
+    text-decoration: none;
+}
+
+.marca:hover {
+    color: #007a2e;
+}
+
+.listanav {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.listanav li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.listanav li a:hover {
+    color: #009c3b;
+}
+
+main {
+    flex: 1;
+}
+
+.hero {
+    min-height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sao-joao.jpg.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.hero-conteudo {
+    width: 100%;
+    max-width: 900px;
+}
+
+.card-curiosidade {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.topo {
+    background: linear-gradient(90deg, #009c3b, #ffdf00, #002776);
+    padding: 15px 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.conteudo {
+    display: flex;
+    align-items: stretch;
+}
+
+.conteudo img {
+    width: 40%;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+.texto {
+    padding: 40px;
+    width: 60%;
+    text-align: left;
+}
+
+.texto h2 {
+    font-size: 32px;
+    color: #009c3b;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.texto ul {
+    list-style-position: inside;
+    color: #555;
+    line-height: 1.8;
+}
+
+.texto li {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.texto li strong {
+    color: #333;
+}
+
+.rodape {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .navegacao {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .listanav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+    }
+    
+    .conteudo img {
+        width: 100%;
+        height: 250px;
+        min-height: auto;
+    }
+    
+    .texto {
+        width: 100%;
+        padding: 25px 20px;
+    }
+    
+    .texto h2 {
+        font-size: 26px;
+    }
+}

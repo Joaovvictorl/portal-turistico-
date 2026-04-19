@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em contato conosco</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contato.css">
+</head>
+
+<body>
+
+   <header class="cabecalho">
+    <nav class="navegacao">
+        <a href="index.html" class="marca">Brasil Encantado</a>
+        <ul class="listanav">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="gastronomia.html">Gastronomia</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-conteudo">
+                <h1>Entre em contato conosco</h1>
+                <a href="#email" class="botao">Enviar Email</a>
+            </div>
+        </section>
+
+        <section class="enviar-email">
+            <h2>Enviar email</h2>
+
+            <input type="text" id="email" placeholder="Digite seu email">
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            <textarea id="comentario" maxlength="500" placeholder="Digite sua mensagem"></textarea>
+            <span id="contador">0 / 500</span>
+            
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Brasil Encantado. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const campoInput = document.getElementById('comentario');
+        const displayContador = document.getElementById('contador');
+
+        campoInput.addEventListener('input', () => {
+            const quantidade = campoInput.value.length;
+            displayContador.innerText = `${quantidade} / 500`;
+        });
+    </script>
+</body>
+</html>
